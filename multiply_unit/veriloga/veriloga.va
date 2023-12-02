@@ -1,0 +1,27 @@
+// VerilogA for ESE562_Final, multiply_unit, veriloga
+
+`include "constants.vams"
+`include "disciplines.vams"
+
+module multiply_unit(i_out, i1_in, i1_out, i2_in, i2_out, ix_in, ix_out);
+
+output i_out;
+electrical i_out;
+input i1_in, i1_out, i2_in, i2_out, ix_in, ix_out;
+electrical i1_in;
+electrical i1_out;
+electrical i2_in;
+electrical i2_out;
+electrical ix_in;
+electrical ix_out;
+
+
+analog begin
+
+	I(i_out) <+ (I(i2_in, i2_out) * I(ix_in, ix_out)) / I(i1_in, i1_out);
+
+end
+
+
+
+endmodule

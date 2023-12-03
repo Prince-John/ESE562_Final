@@ -1,4 +1,4 @@
-//Revision 1
+//Revision 2
 //NOTE
 // Default template for spectre
 // Note:
@@ -12,6 +12,9 @@ liblist myLib, ESE562_Final;
 
 viewlist spectre, cmos_sch, \cmos.sch , schematic, veriloga, ahdl, pspice, dspf;
 stoplist spectre;
+
+
+cell ESE562_Final.multiply_unit binding :veriloga;
 
 
 endconfig
